@@ -24,7 +24,7 @@ function onSubmitForm(e) {
   localStorage.removeItem(STORAGE_KEY);
 }
 
-function onInputForm(e) {
+function onInputForm() {
   const formData = {
     email: refs.email.value,
     message: refs.message.value,
