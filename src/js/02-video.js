@@ -7,8 +7,8 @@ const KEY_TIME = 'videoplayer-current-time';
 
 player.on(
   'timeupdate',
-  throttle(function(currentTime) {
-    const localSetTime = currentTime.seconds;
+  throttle((e) => {
+    const localSetTime = e.seconds;
     localStorage.setItem(KEY_TIME, localSetTime);
     console.log(localSetTime);
   }, 1000),
